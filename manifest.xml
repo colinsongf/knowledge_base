@@ -1,0 +1,19 @@
+<package>
+  <description brief="knowledge_base">
+
+     knowledge_base
+
+  </description>
+  <author>Tanmay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/knowledge_base</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="std_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="nav_msgs"/>
+
+</package>
+
+
