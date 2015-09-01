@@ -21,6 +21,19 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #uncomment if you have defined services
 #rosbuild_gensrv()
 
+
+find_package(PCL 1.7 REQUIRED)
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+# rosbuild_add_executable (spatial_rel_calc src/spatial_rel_calc.cpp)
+# target_link_libraries (spatial_rel_calc ${PCL_LIBRARIES})
+
+rosbuild_add_executable (spatial_rel src/spatial_relationships.cpp)
+target_link_libraries (spatial_rel ${PCL_LIBRARIES})
+
 #common commands for building c++ executables and libraries
 #rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
 #target_link_libraries(${PROJECT_NAME} another_library)
