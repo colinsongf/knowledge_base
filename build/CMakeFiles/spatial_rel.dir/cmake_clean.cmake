@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o"
+  "CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o"
   "../bin/spatial_rel.pdb"
   "../bin/spatial_rel"
 )

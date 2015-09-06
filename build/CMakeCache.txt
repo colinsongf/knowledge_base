@@ -520,7 +520,7 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
-_file_name:FILEPATH=/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp
+_file_name:FILEPATH=/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake

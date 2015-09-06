@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp" "/home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o"
+  "/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp" "/home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

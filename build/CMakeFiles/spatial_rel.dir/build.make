@@ -49,103 +49,103 @@ include CMakeFiles/spatial_rel.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/spatial_rel.dir/flags.make
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: CMakeFiles/spatial_rel.dir/flags.make
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: ../src/SPATIAL_REL_trial.cpp
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: ../manifest.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rostime/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/genpy/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/catkin/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rospack/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roslib/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rospy/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosout/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/tf2/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/rostest/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/tf/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/ar_track_alvar_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/cv_bridge/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/dynamic_reconfigure/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/bond/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/smclib/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/bondcpp/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/nodelet/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/nodelet_topic_tools/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/pcl_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/pcl_conversions/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/pcl_ros/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/resource_retriever/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/visualization_msgs/package.xml
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o: /opt/ros/indigo/share/ar_track_alvar/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: CMakeFiles/spatial_rel.dir/flags.make
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: ../src/spatial_relationships.cpp
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: ../manifest.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rostime/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/genpy/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/catkin/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rospack/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roslib/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rospy/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosout/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/tf2/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/rostest/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/tf/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/ar_track_alvar_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/cv_bridge/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/dynamic_reconfigure/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/bond/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/smclib/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/bondcpp/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/nodelet/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/nodelet_topic_tools/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/pcl_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/pcl_conversions/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/pcl_ros/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/resource_retriever/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/visualization_msgs/package.xml
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o: /opt/ros/indigo/share/ar_track_alvar/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o -c /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o -c /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp > CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.i
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp > CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.i
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp -o CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.s
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp -o CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.s
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.requires:
-.PHONY : CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.requires
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.requires:
+.PHONY : CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.requires
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.provides: CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.requires
-	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.provides.build
-.PHONY : CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.provides
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.provides: CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.requires
+	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.provides.build
+.PHONY : CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.provides
 
-CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.provides.build: CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o
+CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.provides.build: CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o
 
 # Object files for target spatial_rel
 spatial_rel_OBJECTS = \
-"CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o"
+"CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o"
 
 # External object files for target spatial_rel
 spatial_rel_EXTERNAL_OBJECTS =
 
-../bin/spatial_rel: CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o
+../bin/spatial_rel: CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o
 ../bin/spatial_rel: CMakeFiles/spatial_rel.dir/build.make
 ../bin/spatial_rel: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/spatial_rel: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -232,7 +232,7 @@ spatial_rel_EXTERNAL_OBJECTS =
 CMakeFiles/spatial_rel.dir/build: ../bin/spatial_rel
 .PHONY : CMakeFiles/spatial_rel.dir/build
 
-CMakeFiles/spatial_rel.dir/requires: CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o.requires
+CMakeFiles/spatial_rel.dir/requires: CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o.requires
 .PHONY : CMakeFiles/spatial_rel.dir/requires
 
 CMakeFiles/spatial_rel.dir/clean:

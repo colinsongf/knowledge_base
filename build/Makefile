@@ -438,29 +438,29 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/SPATIAL_REL_trial.o: src/SPATIAL_REL_trial.cpp.o
-.PHONY : src/SPATIAL_REL_trial.o
+src/spatial_relationships.o: src/spatial_relationships.cpp.o
+.PHONY : src/spatial_relationships.o
 
 # target to build an object file
-src/SPATIAL_REL_trial.cpp.o:
-	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.o
-.PHONY : src/SPATIAL_REL_trial.cpp.o
+src/spatial_relationships.cpp.o:
+	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.o
+.PHONY : src/spatial_relationships.cpp.o
 
-src/SPATIAL_REL_trial.i: src/SPATIAL_REL_trial.cpp.i
-.PHONY : src/SPATIAL_REL_trial.i
+src/spatial_relationships.i: src/spatial_relationships.cpp.i
+.PHONY : src/spatial_relationships.i
 
 # target to preprocess a source file
-src/SPATIAL_REL_trial.cpp.i:
-	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.i
-.PHONY : src/SPATIAL_REL_trial.cpp.i
+src/spatial_relationships.cpp.i:
+	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.i
+.PHONY : src/spatial_relationships.cpp.i
 
-src/SPATIAL_REL_trial.s: src/SPATIAL_REL_trial.cpp.s
-.PHONY : src/SPATIAL_REL_trial.s
+src/spatial_relationships.s: src/spatial_relationships.cpp.s
+.PHONY : src/spatial_relationships.s
 
 # target to generate assembly for a file
-src/SPATIAL_REL_trial.cpp.s:
-	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/SPATIAL_REL_trial.cpp.s
-.PHONY : src/SPATIAL_REL_trial.cpp.s
+src/spatial_relationships.cpp.s:
+	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/src/spatial_relationships.cpp.s
+.PHONY : src/spatial_relationships.cpp.s
 
 # Help Target
 help:
@@ -497,9 +497,9 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/SPATIAL_REL_trial.o"
-	@echo "... src/SPATIAL_REL_trial.i"
-	@echo "... src/SPATIAL_REL_trial.s"
+	@echo "... src/spatial_relationships.o"
+	@echo "... src/spatial_relationships.i"
+	@echo "... src/spatial_relationships.s"
 .PHONY : help
 
 

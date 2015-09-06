@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/SPATIAL_REL_trial.cpp
+/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/includes/custom_point_types.h
+pcl/point_types.h
+-
+pcl/point_cloud.h
+-
+
+/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/spatial_relationships.cpp
 ros/ros.h
 -
 sensor_msgs/PointCloud2.h
@@ -80,12 +86,6 @@ sstream
 vector
 -
 cmath
--
-
-/home/tanmay/indigo_workspace/sandbox/knowledge_base/src/includes/custom_point_types.h
-pcl/point_types.h
--
-pcl/point_cloud.h
 -
 
 /opt/ros/indigo/include/XmlRpcDecl.h
