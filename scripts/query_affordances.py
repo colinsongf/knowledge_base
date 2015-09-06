@@ -14,8 +14,8 @@ search_order = npy.zeros((number_objects,1))
 
 obj_aff_matrix = npy.array([[1.,1.,0,0,1.],[1.,1.,0,1.,0],[1.,0,1.,0,1.],[0,1.,0,1.,1.]])
 
-for i in range(0,number_actions):
-	obj_aff_matrix[i] = obj_aff_matrix[i]/sum(obj_aff_matrix[i])
+for j in range(0,number_actions):
+	obj_aff_matrix[j] = obj_aff_matrix[j]/sum(obj_aff_matrix[j])
 
 print("Object Affordance Matrix:")
 print(obj_aff_matrix)
@@ -27,12 +27,12 @@ print("Object List:")
 print(object_list)
 
 action_list = npy.dot(obj_aff_matrix,object_list)
-for i in range(0,number_actions):
-	action_list[i] = action_list[i]/sum(action_list)
+for j in range(0,number_actions):
+	action_list[j] = action_list[j]/sum(action_list)
 
 obj_aff_trans = npy.transpose(obj_aff_matrix)
-for i in range(0,number_actions):
-	obj_aff_trans[i] = obj_aff_trans[i]/sum(obj_aff_trans[i])
+for j in range(0,number_actions):
+	obj_aff_trans[j] = obj_aff_trans[j]/sum(obj_aff_trans[j])
 
 search_objs = npy.dot(obj_aff_trans,action_list)
 #search_objs = search_objs - object_list 
