@@ -154,8 +154,7 @@ int main(int argc, char** argv)
 							{	
 								//std::cout<<"Started loop 3."<<vec_index<<" th iteration."<<std::endl;
 								// if (cloud->points[pt_index].label > number_objects)
-									// continue;
-									
+									// continue;									
 								if (cloud->points[pt_index].label == temp_scene.scene_obj_vector[vec_index].label_number)
 								// if (cloud->points[pt_index].label == scene_vector[file_index].scene_obj_vector[vec_index].label_number)
 									{										
@@ -170,13 +169,14 @@ int main(int argc, char** argv)
 										temp_scene.scene_obj_vector[vec_index].geo_centroid.y = (temp_scene.scene_obj_vector[vec_index].geo_centroid.y)/np;
 										temp_scene.scene_obj_vector[vec_index].geo_centroid.z = (temp_scene.scene_obj_vector[vec_index].geo_centroid.z)/np;
 							
-										flag=1; 
+										flag=1;
+										continue; 
 									}
-								else 
-									{	
-										flag=0; 
-										continue; 									
-									}
+								// else 
+									// {	
+										// flag=0; 
+										// continue; 									
+									// }
 							}	
 						if (flag==0)
 							{	
@@ -191,21 +191,17 @@ int main(int argc, char** argv)
 							}
 					}
 
-				
+				// int i=vec_index;
+				char buffer[32];
+				snprintf(buffer, sizeof(char) * 32, "file%i.txt", file_index);						
+				std::ofstream ofs(buffer);
 				for (int vec_index=0; vec_index<temp_scene.scene_obj_vector.size(); vec_index++)
 					{	
-
-						// std::ofstream ofs("saved.txt");
-						int i=vec_index;
-						char buffer[32];
-						snprintf(buffer, sizeof(char) * 32, "file%i.txt", i);
-						std::ofstream ofs(buffer);
-						ofs << temp_scene.scene_obj_vector[vec_index]; // store the object to file
-						std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;
-						ofs.close();
-
+						ofs<<temp_scene.scene_obj_vector[vec_index]<<std::endl; // store the object to file
+						// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;										
 					}
-				std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;
+				ofs.close();
+				// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;
 			}
 		
 		std::cout<<"Break point 1."<<std::endl;
