@@ -58,5 +58,11 @@ def lookup_value_add(find_obj_index, alt_obj_index, sample_pt, alt_obj_pose, alt
 	return value_add
 
 
+value_function = numpy.zeros(discrete_size,discrete_size)
+for x in rad_dist:
+	for y in rad_dist:		
+		sample=x,y
+		for alt_obj_ind in range(0,number_objects):			
+			value_function[x][y]+=lookup_value_add(find_obj, alt_obj_ind, sample, alt_obj_pose, alt_obj_pose_conf)
 
 
