@@ -88,7 +88,7 @@ class objects
 			geometry_msgs::Vector3 geo_centroid;
 
 			objects()
-				{	label_number=-1;
+				{	label_number=0;
 					number_points=0;  
 					geo_centroid.x = 0; 
 					geo_centroid.y = 0; 
@@ -143,15 +143,15 @@ int main(int argc, char** argv)
 		int flag; 
 		pcl::PCDReader reader;
 		std::cout<<"Value of argc: "<<argc<<std::endl;
-
+		scenes temp_scene; 
 		for (int file_ind=1; file_ind<argc; file_ind++)
 			{	
 				std::cout<<"File number: "<<file_ind-1<<std::endl;
-				// scene_vector.push_back(temp_scene);
+
+				scene_vector.push_back(temp_scene);
 				reader.read (argv[file_ind], *cloud);
 				file_index = file_ind - 1; 
-				scenes temp_scene; 
-
+				
 				for (int i=0; i<number_objects; i++)
 					object_occurance[i]=0; 
 
@@ -200,6 +200,9 @@ int main(int argc, char** argv)
 								temp_scene.scene_obj_vector.push_back(temp_obj);
 
 								object_occurance[temp_obj.label_number]=1;
+
+								scene_vector[file_index].scene_num_obj++;
+								scene_vector[file_index].scene_obj_vector.push_back(temp_obj);
 							}
 					}
 
@@ -264,28 +267,43 @@ void compute_sample_relationships()
 	{	// Load a point cloud file, run the detector, store the object centroids, 
 		//Then call spatial_model over each pair of objects
 		//Store / save the results into whatever 
-			
+		
+		std::cout<<"Hello1"<<std::endl;
 		for (int scene_ind=0; scene_ind<scene_vector.size(); scene_ind++)			
+			{	std::cout<<"Hello1.5 "<<scene_vector.size()<<std::endl;		
 				for (int i=0; i<number_objects; i++)					
-						for (int j=0; j<number_objects; j++)
-							scene_vector[scene_ind].scene_spatial_rel[i][j] = -1;	
+					{	for (int j=0; j<number_objects; j++)
+							{	scene_vector[scene_ind].scene_spatial_rel[i][j] = -1;	
+							}
+					}
+			}
+		
+		std::cout<<"Hello2"<<scene_vector.size()<<std::endl;			
 
 		for (int scene_ind=0; scene_ind<scene_vector.size(); scene_ind++)
-			for (int obj_ind_i=0; obj_ind_i<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_i++)
-				for (int obj_ind_j=0; obj_ind_j<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_j++)
-					{	tf::Vector3 rel_trans(scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.x - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.x,
-											  scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.y - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.y,
-   		   									  scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.z - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.z);					
-						//Change from hard decision about threshold distance. 
-						//Now it just notes the distance by which they are related if the co-occur in the scene at all. 
-						//The Gaussian in Querying spatial relationships takes care of this. 
-						//If the object with that particular label isn't present in the scene, the mean value is negative as per the above loop.
+			{	std::cout<<"Hello3   "<<std::endl;		
 
-						int x23 = scene_vector[scene_ind].scene_obj_vector[obj_ind_i].label_number;
-						int x45 = scene_vector[scene_ind].scene_obj_vector[obj_ind_j].label_number;
-						// scene_vector[scene_ind].scene_spatial_rel[scene_vector[scene_ind].scene_obj_vector[obj_ind_i].label_number][scene_vector[scene_ind].scene_obj_vector[obj_ind_j].label_number] = rel_trans.length();
-						scene_vector[scene_ind].scene_spatial_rel[x23][x45] = rel_trans.length();
+				for (int obj_ind_i=0; obj_ind_i<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_i++)
+					{	for (int obj_ind_j=0; obj_ind_j<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_j++)
+							{	
+								std::cout<<"Hello4"<<std::endl;
+								tf::Vector3 rel_trans(scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.x - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.x,
+											  		  scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.y - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.y,
+   		   									  		  scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.z - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.z);					
+								//Change from hard decision about threshold distance. 
+								//Now it just notes the distance by which they are related if the co-occur in the scene at all. 
+								//The Gaussian in Querying spatial relationships takes care of this. 
+								//If the object with that particular label isn't present in the scene, the mean value is negative as per the above loop.
+
+								int x23 = scene_vector[scene_ind].scene_obj_vector[obj_ind_i].label_number;
+								int x45 = scene_vector[scene_ind].scene_obj_vector[obj_ind_j].label_number;
+
+								std::cout<<"I Label number: "<<x23<<" J Label number: "<<x45<<std::endl;
+								// scene_vector[scene_ind].scene_spatial_rel[scene_vector[scene_ind].scene_obj_vector[obj_ind_i].label_number][scene_vector[scene_ind].scene_obj_vector[obj_ind_j].label_number] = rel_trans.length();
+								scene_vector[scene_ind].scene_spatial_rel[x23][x45] = rel_trans.length();
+							}
 					}
+			}
 
 	}
 
@@ -325,8 +343,10 @@ void compute_relationship_matrix()
 						if (scene_vector[k].scene_spatial_rel[i][j]>0)
 							dev_value += pow(scene_vector[k].scene_spatial_rel[i][j] - spatial_relation_mean[i][j] ,2);
 					if (dev_value!=0)
-						{	spatial_relation_dev[i][j] = pow(dev_value/num_corr_objs,0.5);
-							spatial_relation_dev[j][i] = pow(dev_value/num_corr_objs,0.5);
+						{	
+							// std::cout<<"Hello4343"<<std::endl;
+							spatial_relation_dev[i][j] = sqrt(dev_value/num_corr_objs);
+							spatial_relation_dev[j][i] = sqrt(dev_value/num_corr_objs);
 						}						
 				}				
 	}
