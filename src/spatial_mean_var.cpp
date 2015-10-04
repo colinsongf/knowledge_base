@@ -329,7 +329,7 @@ void compute_relationship_matrix()
 							spatial_relation_dev[j][i] = pow(dev_value/num_corr_objs,0.5);
 						}						
 				}				
-}
+	}
 
 
 
