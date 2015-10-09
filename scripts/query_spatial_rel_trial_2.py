@@ -26,6 +26,7 @@ pairwise_value_function = pairwise_value_function.reshape((number_objects,number
 value_function = numpy.zeros(shape=(discrete_size,discrete_size))
 
 object_confidence = numpy.zeros(number_objects)
+object_poses = numpy.zeros(shape=(number_objects),2)
 
 
 def lookup_value_add(sample_pt, alt_obj_pose, alt_obj_pose_conf):
@@ -58,11 +59,49 @@ def lookup_value_add(sample_pt, alt_obj_pose, alt_obj_pose_conf):
 
 #REMEMBER, this is outside the lookup_value_add function. 
 
+def lookup_value_add(sample_pt, obj_index):
+	#########################	
+	#Here, the inputs are the sample point which we are checking the value of, pose of the alternate object, and confidence of detection of the alternate object. 
+	#Find radius value. 
+	rad_value = ((sample_pt[0]-object_poses[obj_index][0])**2+(sample_pt[0]-object_poses[obj_index][1])**2)**0.5
+	# rad_value = ((sample_pt.x-alt_obj_pose.x)**2+(sample_pt.y-alt_obj_pose.y)**2)**0.5
+
+	#Find radius bucket. 
+	if rad_value<rad_dist[0]:
+		bucket=0;
+	else if rad_value>rad_dist[len(rad_dist)-1]:
+		bucket=len(rad_dist)-1
+	else:
+		for i in range(0,len(rad_dist)):	
+			if rad_value>rad_dist[i] and rad_value<rad_dist[i+1]:
+				bucket=i
+
+	#Find value lookup to assign to the sample point. 
+	value_lookup=0
+	for i in range(0,number_objects):
+		for j in range(0,number_objects):
+			value_lookup += pairwise_value_function[i][j][bucket]
+
+	#Return value lookup. 
+	return value_lookup
+	############################
+
+
+#REMEMBER, this is outside the lookup_value_add function. 
+
+
 def calculate_value_function(alt_obj_pose, alt_obj_pose_conf):
 	for x in discrete_space_x:
 		for y in discrete_space_y:
 			sample = x,y
 			value_function[x][y] = lookup_value_add(sample, alt_obj_pose, alt_obj_pose_conf)
+
+def calculate_value_function(obj_index):
+	for x in discrete_space_x:
+		for y in discrete_space_y:
+			sample = x,y
+			value_function[x][y] = lookup_value_add(sample, obj_index)
+
 
 # def callback(data):
 #     # rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
@@ -76,7 +115,8 @@ def ar_marker_callback(msg):
 	for i in range(0,len(msg.markers)):		
 		label = msg.markers[i].id
 		object_confidence[label] = msg.markers[i].confidence
-
+		object_poses[label][0] = msg.markers[i].pose.pose.position.x
+		object_poses[label][1] = msg.markers[i].pose.pose.position.y
 
 def listener():
     # The anonymous=True flag means that rospy will choose a unique    
