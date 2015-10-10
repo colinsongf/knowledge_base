@@ -3,6 +3,7 @@ import rospy
 import numpy as npy 
 import sys
 import random
+from scipy.stats import rankdata
 
 number_objects = 41
 number_actions = 15
@@ -48,7 +49,8 @@ search_objs = search_objs - object_list
 
 search_objs = object_list - search_objs    ###THIS SHOULD BE SEARCH_OBJS - OBJECT_LIST, but since argsort is ascending..... 
 search_order = npy.argsort(search_objs)
-search_order_try = npy.argsort(search_order+1)
+# search_order_try = npy.argsort(search_order+1)
+search_order_try = map(int,rankdata(search_objs,method='ordinal'))
 
 print("Search objects:")
 print(-search_objs)
