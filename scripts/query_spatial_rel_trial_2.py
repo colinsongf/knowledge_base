@@ -10,7 +10,7 @@ from ar_track_alvar.msg import AlvarMarkers
 
 radius_threshold = 2
 discrete_size = 100
-number_objects =130
+number_objects = 130
 
 lower_bound=0
 upper_bound=radius_threshold

@@ -397,8 +397,8 @@ clean: CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 # Target rules for target CMakeFiles/rospack_genmsg.dir
 
 # All Build rule for target.
-CMakeFiles/rospack_genmsg.dir/all: CMakeFiles/ROSBUILD_genmsg_lisp.dir/all
 CMakeFiles/rospack_genmsg.dir/all: CMakeFiles/ROSBUILD_genmsg_cpp.dir/all
+CMakeFiles/rospack_genmsg.dir/all: CMakeFiles/ROSBUILD_genmsg_lisp.dir/all
 	$(MAKE) -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/depend
 	$(MAKE) -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 
@@ -460,8 +460,8 @@ clean: CMakeFiles/rospack_genmsg_libexe.dir/clean
 # Target rules for target CMakeFiles/rospack_gensrv.dir
 
 # All Build rule for target.
-CMakeFiles/rospack_gensrv.dir/all: CMakeFiles/ROSBUILD_gensrv_lisp.dir/all
 CMakeFiles/rospack_gensrv.dir/all: CMakeFiles/ROSBUILD_gensrv_cpp.dir/all
+CMakeFiles/rospack_gensrv.dir/all: CMakeFiles/ROSBUILD_gensrv_lisp.dir/all
 	$(MAKE) -f CMakeFiles/rospack_gensrv.dir/build.make CMakeFiles/rospack_gensrv.dir/depend
 	$(MAKE) -f CMakeFiles/rospack_gensrv.dir/build.make CMakeFiles/rospack_gensrv.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 
@@ -520,13 +520,83 @@ clean: CMakeFiles/run_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/spatial_file.dir
+
+# All Build rule for target.
+CMakeFiles/spatial_file.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/depend
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles  3
+	@echo "Built target spatial_file"
+.PHONY : CMakeFiles/spatial_file.dir/all
+
+# Include target in all.
+all: CMakeFiles/spatial_file.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/spatial_file.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/spatial_file.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 0
+.PHONY : CMakeFiles/spatial_file.dir/rule
+
+# Convenience name for target.
+spatial_file: CMakeFiles/spatial_file.dir/rule
+.PHONY : spatial_file
+
+# clean rule for target.
+CMakeFiles/spatial_file.dir/clean:
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/clean
+.PHONY : CMakeFiles/spatial_file.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/spatial_file.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/spatial_mean_var.dir
+
+# All Build rule for target.
+CMakeFiles/spatial_mean_var.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/depend
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles  4
+	@echo "Built target spatial_mean_var"
+.PHONY : CMakeFiles/spatial_mean_var.dir/all
+
+# Include target in all.
+all: CMakeFiles/spatial_mean_var.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/spatial_mean_var.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/spatial_mean_var.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles 0
+.PHONY : CMakeFiles/spatial_mean_var.dir/rule
+
+# Convenience name for target.
+spatial_mean_var: CMakeFiles/spatial_mean_var.dir/rule
+.PHONY : spatial_mean_var
+
+# clean rule for target.
+CMakeFiles/spatial_mean_var.dir/clean:
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/clean
+.PHONY : CMakeFiles/spatial_mean_var.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/spatial_mean_var.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/spatial_rel.dir
 
 # All Build rule for target.
 CMakeFiles/spatial_rel.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/depend
 	$(MAKE) -f CMakeFiles/spatial_rel.dir/build.make CMakeFiles/spatial_rel.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tanmay/indigo_workspace/sandbox/knowledge_base/build/CMakeFiles  5
 	@echo "Built target spatial_rel"
 .PHONY : CMakeFiles/spatial_rel.dir/all
 

@@ -40,6 +40,8 @@ target_link_libraries (spatial_file ${PCL_LIBRARIES})
 rosbuild_add_executable (spatial_mean_var src/spatial_mean_var.cpp)
 target_link_libraries (spatial_mean_var ${PCL_LIBRARIES})
 
+#rosbuild_add_executable (spatial_mean_var_noread src/spatial_mean_var_noread.cpp)
+#target_link_libraries (spatial_mean_var_noread ${PCL_LIBRARIES})
 #common commands for building c++ executables and libraries
 #rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
 #target_link_libraries(${PROJECT_NAME} another_library)

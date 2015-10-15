@@ -127,7 +127,8 @@ int main(int argc, char** argv)
 					{	
 						// std::cout<<"Started loop 2. "<<"Point number "<<pt_index<<std::endl;
 						flag=0; 
-						for (int vec_index=0; vec_index<sizeof(scene_vector[file_index].scene_obj_vector); vec_index++)
+						
+						for (int vec_index=0; vec_index<scene_vector[file_index].scene_obj_vector.size(); vec_index++)
 							{	
 								//std::cout<<"Started loop 3."<<vec_index<<" th iteration."<<std::endl;
 								// if (cloud->points[pt_index].label > number_objects)
@@ -214,10 +215,10 @@ void compute_sample_relationships()
 			}
 			
 		for (int scene_ind=0; scene_ind<scene_vector.size(); scene_ind++)
-			{	
-				for (int obj_ind_i=0; obj_ind_i<sizeof(scene_vector[scene_ind].scene_obj_vector); obj_ind_i++)
+			{					
+				for (int obj_ind_i=0; obj_ind_i<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_i++)
 					{	
-						for (int obj_ind_j=0; obj_ind_j<sizeof(scene_vector[scene_ind].scene_obj_vector); obj_ind_j++)
+						for (int obj_ind_j=0; obj_ind_j<scene_vector[scene_ind].scene_obj_vector.size(); obj_ind_j++)
 							{	
 								tf::Vector3 rel_trans(scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.x - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.x,
 													  scene_vector[scene_ind].scene_obj_vector[obj_ind_i].geo_centroid.y - scene_vector[scene_ind].scene_obj_vector[obj_ind_j].geo_centroid.y,

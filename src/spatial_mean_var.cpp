@@ -148,7 +148,7 @@ int main(int argc, char** argv)
 			{	
 				std::cout<<"File number: "<<file_ind-1<<std::endl;
 
-				scene_vector.push_back(temp_scene);
+				// scene_vector.push_back(temp_scene);
 				reader.read (argv[file_ind], *cloud);
 				file_index = file_ind - 1; 
 				
@@ -207,18 +207,18 @@ int main(int argc, char** argv)
 					}
 
 				// int i=vec_index;
-				// char buffer[32];
+				char buffer[32];
 				// for (int i=1; i<argc; i++)
 				// 	std::cout<<argv[i]<<std::endl;
-				// snprintf(buffer, sizeof(char) * 32, "file%s.txt", argv[argc-1]);						
-				// std::ofstream ofs(buffer);
+				snprintf(buffer, sizeof(char) * 32, "file%i.txt", file_index);						
+				std::ofstream ofs(buffer);
 
 				//USE THE FOLLOWING 4 LINES TO WRITE TO FILE A BINARY VARIABLE AS TO WHETHER THE OBJECT WITH THAT INDEX OCCURS IN A PARTICULAR SCENE OR NOT			
 
-				// for (int ob=0; ob<number_objects; ob++)
-				//  	{	
-				// 		ofs<<object_occurance[ob]<<std::endl;
-				// 	}
+				for (int ob=0; ob<number_objects; ob++)
+				 	{	
+						ofs<<object_occurance[ob]<<std::endl;
+					}
 
 
 				//USE THESE LINES TO WRITE TO THE FILE : 
@@ -234,42 +234,42 @@ int main(int argc, char** argv)
 				// 	}
 
 
-				// ofs.close();
+				ofs.close();
 				// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;
 			}
 		
 		std::cout<<"Break point 1."<<std::endl;
-		compute_sample_relationships();
+		// compute_sample_relationships();
 		std::cout<<"Break point 2."<<std::endl;
-		compute_relationship_matrix();
+		// compute_relationship_matrix();
 		std::cout<<"Break point 3."<<std::endl;
 
-		for(int i=0; i<number_objects; i++)
-			{	for(int j=0; j<number_objects; j++)
-					std::cout<<spatial_relation_mean[i][j]<<" ";
-				std::cout<<std::endl;
-			}
+		// for(int i=0; i<number_objects; i++)
+		// 	{	for(int j=0; j<number_objects; j++)
+		// 			std::cout<<spatial_relation_mean[i][j]<<" ";
+		// 		std::cout<<std::endl;
+		// 	}
 
-		for(int i=0; i<number_objects; i++)
-			{	for(int j=0; j<number_objects; j++)
-					std::cout<<spatial_relation_dev[i][j]<<" ";
-				std::cout<<std::endl;
-			}	
+		// for(int i=0; i<number_objects; i++)
+		// 	{	for(int j=0; j<number_objects; j++)
+		// 			std::cout<<spatial_relation_dev[i][j]<<" ";
+		// 		std::cout<<std::endl;
+		// 	}	
 		
-		std::ofstream output_file("Spatial Relationships.txt");
-		for (int i=0; i<number_objects; i++)
-			{	for (int j=0; j<number_objects; j++)
-					{	output_file <<spatial_relation_mean[i][j]<<" ";
-					}
-				output_file<<std::endl;						
-			}		
-		for (int i=0; i<number_objects; i++)
-			{	for (int j=0; j<number_objects; j++)
-					{	output_file <<spatial_relation_dev[i][j]<<" ";
-					}
-				output_file<<std::endl;						
-			}
-		output_file.close();
+		// std::ofstream output_file("Spatial Relationships.txt");
+		// for (int i=0; i<number_objects; i++)
+		// 	{	for (int j=0; j<number_objects; j++)
+		// 			{	output_file <<spatial_relation_mean[i][j]<<" ";
+		// 			}
+		// 		output_file<<std::endl;						
+		// 	}		
+		// for (int i=0; i<number_objects; i++)
+		// 	{	for (int j=0; j<number_objects; j++)
+		// 			{	output_file <<spatial_relation_dev[i][j]<<" ";
+		// 			}
+		// 		output_file<<std::endl;						
+		// 	}
+		// output_file.close();
 		return 0; 
 	}
 

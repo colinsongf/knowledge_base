@@ -12,7 +12,7 @@ upper_bound=radius_threshold
 #Defining mean and standard deviation values. 
 #In the real system, both of these come from the learnt data. 
 mean = 5
-sigma = 3
+sigma = 100
 
 #Converting to a non-zero mean. 
 lower_bound = (lower_bound-mean)/sigma

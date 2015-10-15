@@ -335,6 +335,32 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
+# Target rules for targets named spatial_file
+
+# Build rule for target.
+spatial_file: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 spatial_file
+.PHONY : spatial_file
+
+# fast build rule for target.
+spatial_file/fast:
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/build
+.PHONY : spatial_file/fast
+
+#=============================================================================
+# Target rules for targets named spatial_mean_var
+
+# Build rule for target.
+spatial_mean_var: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 spatial_mean_var
+.PHONY : spatial_mean_var
+
+# fast build rule for target.
+spatial_mean_var/fast:
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/build
+.PHONY : spatial_mean_var/fast
+
+#=============================================================================
 # Target rules for targets named spatial_rel
 
 # Build rule for target.
@@ -438,6 +464,54 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/spatial_file.o: src/spatial_file.cpp.o
+.PHONY : src/spatial_file.o
+
+# target to build an object file
+src/spatial_file.cpp.o:
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/src/spatial_file.cpp.o
+.PHONY : src/spatial_file.cpp.o
+
+src/spatial_file.i: src/spatial_file.cpp.i
+.PHONY : src/spatial_file.i
+
+# target to preprocess a source file
+src/spatial_file.cpp.i:
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/src/spatial_file.cpp.i
+.PHONY : src/spatial_file.cpp.i
+
+src/spatial_file.s: src/spatial_file.cpp.s
+.PHONY : src/spatial_file.s
+
+# target to generate assembly for a file
+src/spatial_file.cpp.s:
+	$(MAKE) -f CMakeFiles/spatial_file.dir/build.make CMakeFiles/spatial_file.dir/src/spatial_file.cpp.s
+.PHONY : src/spatial_file.cpp.s
+
+src/spatial_mean_var.o: src/spatial_mean_var.cpp.o
+.PHONY : src/spatial_mean_var.o
+
+# target to build an object file
+src/spatial_mean_var.cpp.o:
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/src/spatial_mean_var.cpp.o
+.PHONY : src/spatial_mean_var.cpp.o
+
+src/spatial_mean_var.i: src/spatial_mean_var.cpp.i
+.PHONY : src/spatial_mean_var.i
+
+# target to preprocess a source file
+src/spatial_mean_var.cpp.i:
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/src/spatial_mean_var.cpp.i
+.PHONY : src/spatial_mean_var.cpp.i
+
+src/spatial_mean_var.s: src/spatial_mean_var.cpp.s
+.PHONY : src/spatial_mean_var.s
+
+# target to generate assembly for a file
+src/spatial_mean_var.cpp.s:
+	$(MAKE) -f CMakeFiles/spatial_mean_var.dir/build.make CMakeFiles/spatial_mean_var.dir/src/spatial_mean_var.cpp.s
+.PHONY : src/spatial_mean_var.cpp.s
+
 src/spatial_relationships.o: src/spatial_relationships.cpp.o
 .PHONY : src/spatial_relationships.o
 
@@ -489,6 +563,8 @@ help:
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
 	@echo "... run_tests"
+	@echo "... spatial_file"
+	@echo "... spatial_mean_var"
 	@echo "... spatial_rel"
 	@echo "... test"
 	@echo "... test-future"
@@ -497,6 +573,12 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/spatial_file.o"
+	@echo "... src/spatial_file.i"
+	@echo "... src/spatial_file.s"
+	@echo "... src/spatial_mean_var.o"
+	@echo "... src/spatial_mean_var.i"
+	@echo "... src/spatial_mean_var.s"
 	@echo "... src/spatial_relationships.o"
 	@echo "... src/spatial_relationships.i"
 	@echo "... src/spatial_relationships.s"

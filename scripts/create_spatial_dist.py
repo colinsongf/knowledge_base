@@ -60,13 +60,16 @@ with file('pairwise_value_function.txt','w') as outfile:
 		npy.savetxt(outfile,data_slice,fmt='%-7.2f')
 		outfile.write('# New slice\n')
 
+# with file('radius_lin_space.txt','w') as rad_file:
+	# for i in range(0,len(rad_dist)):
+		# print rad_dist[i]
+		# rad_file.write(rad_dist[i])
+
 ######In order to read the data. 
 # new_data = np.loadtxt('pairwise_value_function.txt')
 # # Note that this returned a 2D array!
 # print new_data.shape
 # new_data = new_data.reshape((number_objects,number_objects,discrete_size))
-# # Just to check that they're the same...
-# assert np.all(new_data == data)
 
 
 # plt.plot(rad_dist,prob_dist_func)

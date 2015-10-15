@@ -68,6 +68,9 @@ geometry_msgs::PoseStamped robot_pose;
 double sample_spatial_relation[number_training_scenes][number_objects][number_objects];
 double spatial_relation[number_objects][number_objects];
 
+int object_occurance[number_objects];
+// double action_occurance[nu]
+
 // pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
 pcl::PointCloud<PointT>::Ptr cloud (new pcl::PointCloud<PointT>);
 
@@ -83,7 +86,7 @@ class objects
 			geometry_msgs::Vector3 geo_centroid;
 
 			objects()
-				{	label_number=-1;
+				{	label_number=0;
 					number_points=0;  
 					geo_centroid.x = 0; 
 					geo_centroid.y = 0; 
@@ -138,6 +141,7 @@ int main(int argc, char** argv)
 		int flag; 
 		pcl::PCDReader reader;
 		std::cout<<"Value of argc: "<<argc<<std::endl;
+		// scenes temp_scene; 
 		for (int file_ind=1; file_ind<argc; file_ind++)
 			{	
 				std::cout<<"File number: "<<file_ind-1<<std::endl;
@@ -145,6 +149,10 @@ int main(int argc, char** argv)
 				reader.read (argv[file_ind], *cloud);
 				file_index = file_ind - 1; 
 				scenes temp_scene; 
+
+				for (int i=0; i<number_objects; i++)
+					object_occurance[i]=0; 
+
 				for (size_t pt_index=0; pt_index<cloud->size(); pt_index++)			
 					{	
 						// std::cout<<"Started loop 2. "<<"Point number "<<pt_index<<std::endl;
@@ -168,7 +176,7 @@ int main(int argc, char** argv)
 										temp_scene.scene_obj_vector[vec_index].geo_centroid.x = (temp_scene.scene_obj_vector[vec_index].geo_centroid.x)/np;
 										temp_scene.scene_obj_vector[vec_index].geo_centroid.y = (temp_scene.scene_obj_vector[vec_index].geo_centroid.y)/np;
 										temp_scene.scene_obj_vector[vec_index].geo_centroid.z = (temp_scene.scene_obj_vector[vec_index].geo_centroid.z)/np;
-							
+										
 										flag=1;
 										continue; 
 									}
@@ -188,6 +196,8 @@ int main(int argc, char** argv)
 								// temp_scene.number_objects++;
 								temp_scene.scene_num_obj++;
 								temp_scene.scene_obj_vector.push_back(temp_obj);
+
+								object_occurance[temp_obj.label_number]=1;
 							}
 					}
 
@@ -195,11 +205,29 @@ int main(int argc, char** argv)
 				char buffer[32];
 				snprintf(buffer, sizeof(char) * 32, "file%i.txt", file_index);						
 				std::ofstream ofs(buffer);
-				for (int vec_index=0; vec_index<temp_scene.scene_obj_vector.size(); vec_index++)
-					{	
-						ofs<<temp_scene.scene_obj_vector[vec_index]<<std::endl; // store the object to file
-						// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;										
+
+
+				//USE THE FOLLOWING 4 LINES TO WRITE TO FILE A BINARY VARIABLE AS TO WHETHER THE OBJECT WITH THAT INDEX OCCURS IN A PARTICULAR SCENE OR NOT			
+
+				for (int ob=0; ob<number_objects; ob++)
+				 	{	
+						ofs<<object_occurance[ob]<<std::endl;
 					}
+
+
+				//USE THESE LINES TO WRITE TO THE FILE : 
+				/*	FOR EACH OBJECT PRESENT IN THE SCENE,
+					LABEL NUMBER
+					NUMBER OF POINTS
+					GEOMETRIC CENTROID OF THAT POINT
+				*/
+				// for (int vec_index=0; vec_index<temp_scene.scene_obj_vector.size(); vec_index++)
+				// 	{	
+				// 		ofs<<temp_scene.scene_obj_vector[vec_index]<<std::endl; // store the object to file						
+				// 		// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;										
+				// 	}
+
+
 				ofs.close();
 				// std::cout<<temp_scene.scene_obj_vector.size()<<std::endl;
 			}
