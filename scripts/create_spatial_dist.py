@@ -15,6 +15,8 @@ for line in file_ob:
     if len(line) > 0:
       spatial_mean.append(map(float, line.split(' ')))
 
+
+
 #Loading spatial standard deviation data. 
 file_ob = open(str(sys.argv[2]))
 for line in file_ob:
@@ -25,7 +27,7 @@ for line in file_ob:
 #Defining standard parameters for gaussian. 
 radius_threshold = 10
 discrete_size = 100
-number_objects=130
+number_objects=41
 
 lower_bound=0
 upper_bound=radius_threshold

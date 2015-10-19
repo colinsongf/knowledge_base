@@ -7,12 +7,14 @@ from std_msgs.msg import String
 import roslib
 from nav_msgs.msg import Odometry
 import sys
+
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 # from ar_track_alvar.msg import AlvarMarkers
 import random
 
-radius_threshold = 2
+radius_threshold = 5
 discrete_size = 100
-
 
 discrete_space_x = 20
 discrete_space_y = 20
@@ -21,13 +23,14 @@ max_dist = 5
 #Dummy set of variables for the random object spatial querying. 
 space_dist = npy.linspace(-max_dist,max_dist,discrete_space_x)
 
-number_objects = 130
-# number_objects = 41
+# number_objects = 130
+number_objects = 41
 
 lower_bound=0
 upper_bound=radius_threshold
 
 rad_dist = npy.linspace(0,radius_threshold,discrete_size)
+print rad_dist
 
 #READING THE spatial distribution function from file. 
 pairwise_value_function = npy.loadtxt(str(sys.argv[1]))
@@ -35,14 +38,14 @@ pairwise_value_function = npy.loadtxt(str(sys.argv[1]))
 print pairwise_value_function.shape
 pairwise_value_function = pairwise_value_function.reshape((number_objects,number_objects,discrete_size))
 
-value_function = npy.zeros(shape=(discrete_size,discrete_size))
-
+value_function = npy.zeros(shape=(discrete_space_x,discrete_space_y))
+# number_objects = 41
 object_confidence = npy.zeros(number_objects)
 object_poses = npy.zeros(shape=(number_objects,2))
 
-number_objects = 41
+# number_objects = 41
 def random_obj_positions():
-	number_scene_objects = 10
+	number_scene_objects = 30
 
 	for i in range(0,number_scene_objects):		
 		trial_label = random.randrange(0,number_objects)
@@ -63,7 +66,7 @@ def lookup_value_add(sample_pt, obj_index):
 
 	# print "Reached point 2."
 	#Find radius value. 	
-	rad_value = ((sample_pt[0]-object_poses[obj_index][0])**2+(sample_pt[0]-object_poses[obj_index][1])**2)**0.5
+	rad_value = (((sample_pt[0]-object_poses[obj_index][0])**2)+((sample_pt[0]-object_poses[obj_index][1])**2))**0.5
 	# rad_value = ((sample_pt.x-alt_obj_pose.x)**2+(sample_pt.y-alt_obj_pose.y)**2)**0.5
 	# print "Radius value:",rad_value
 	#Find radius bucket. 
@@ -75,13 +78,16 @@ def lookup_value_add(sample_pt, obj_index):
 		for i in range(0,len(rad_dist)):	
 			if rad_value>rad_dist[i] and rad_value<rad_dist[i+1]:
 				bucket=i
+
+	print sample_pt, rad_value, bucket
 	# print "Bucket:",bucket
 	#Find value lookup to assign to the sample point. 
+
 	value_lookup=0
 	for i in range(0,number_objects):
 		for j in range(0,number_objects):
 			value_lookup += pairwise_value_function[i][j][bucket]
-	print "Value lookup.",value_lookup
+	# print "Value lookup.",value_lookup
 
 	#Return value lookup. 
 	return value_lookup
@@ -90,29 +96,29 @@ def lookup_value_add(sample_pt, obj_index):
 def calculate_value_function(obj_index):
 	# for x in discrete_space_x:
 		# for y in discrete_space_y:
-	print "Reached point 1."
+	# print "Reached point 1."
 	for i in range(0,discrete_space_x): 
-		print "Reached point 2.",i
-		for j in range(0,discrete_space_y):
-			# sample = x,y
-			# print "Reached point 3: ",j
+		# print "Reached point 2.",i
+		for j in range(0,discrete_space_y):			
+			
 			sample = space_dist[i],space_dist[j]
 			# print sample
-			x = lookup_value_add(sample, obj_index)
-			print "Lookup: ",x
-			# value_function[i][j] = lookup_value_add(sample, obj_index)
+			x = lookup_value_add(sample, obj_index)			
 			value_function[i][j]=x
-
-	
 
 calculate_value_function(4)
 
 print npy.any(value_function)
-# print npy.all(value_function==0)
 
 for i in range(0,discrete_space_x):
-	# for j in range(0,discrete_space_y):
 	print value_function[i]
+
+fig = plt.figure()
+ax = fig.add_subplot(111,projection='3d')
+X,Y=npy.meshgrid(space_dist,space_dist)
+ax.plot_surface(X,Y,value_function,cmap=plt.cm.jet, cstride=1, rstride=1)
+plt.show()
+
 
 # def callback(data):
 #     # rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
