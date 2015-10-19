@@ -39,23 +39,27 @@ for line in file_ob:
 recreate_spatial_mean = npy.zeros(shape=(number_objects_1,number_objects_1)) 
 recreate_spatial_dev = npy.zeros(shape=(number_objects_1,number_objects_1))
 
-# for i in range(0,number_objects_1):
-# 	for j in range(0,number_objects_1):	
-# 		for k in range(0,len(object_index_mapping[i])):
-# 			for l in range(0,len(object_index_mapping[j])):
-# 				recreate_spatial_mean[i][j] = recreate_spatial_mean[i][j] + spatial_mean[k][l]
-# 				recreate_spatial_dev[i][j] = ((recreate_spatial_dev[i][j]**2) + (spatial_dev[k][k]**2))**0.5
-
 for i in range(0,number_objects_1):
 	for j in range(0,number_objects_1):	
-		for k in object_index_mapping[i]:
-			for l in object_index_mapping[j]:
-				recreate_spatial_mean[i][j] = recreate_spatial_mean[i][j] + spatial_mean[k][l]
-				recreate_spatial_dev[i][j] = ((recreate_spatial_dev[i][j]**2) + (spatial_dev[k][k]**2))**0.5
-		if (recreate_spatial_mean[i][j]<0):
-			recreate_spatial_mean[i][j]=-1
-		if (recreate_spatial_dev[i][j]>1000000):		
-			recreate_spatial_dev[i][j]=1000000
+		# for k in range(0,len(object_index_mapping[i])):
+			# for l in range(0,len(object_index_mapping[j])):
+		k = object_index_mapping[i][0]
+		l = object_index_mapping[j][0]
+		# recreate_spatial_mean[i][j] = spatial_mean[object_index_mapping[i]][object_index_mapping[j]]
+		# recreate_spatial_dev[i][j] = spatial_dev[object_index_mapping[i]][object_index_mapping[j]]
+		recreate_spatial_mean[i][j] = spatial_mean[k][l]
+		recreate_spatial_dev[i][j] = spatial_dev[k][l]
+
+# for i in range(0,number_objects_1):
+# 	for j in range(0,number_objects_1):	
+# 		for k in object_index_mapping[i]:
+# 			for l in object_index_mapping[j]:
+# 				recreate_spatial_mean[i][j] = recreate_spatial_mean[i][j] + spatial_mean[k][l]
+# 				recreate_spatial_dev[i][j] = ((recreate_spatial_dev[i][j]**2) + (spatial_dev[k][k]**2))**0.5
+# 		if (recreate_spatial_mean[i][j]<0):
+# 			recreate_spatial_mean[i][j]=-1
+# 		if (recreate_spatial_dev[i][j]>1000000):		
+# 			recreate_spatial_dev[i][j]=1000000
 
 
 with file('recreated_spatial_mean_1.txt','w') as outfile:	
