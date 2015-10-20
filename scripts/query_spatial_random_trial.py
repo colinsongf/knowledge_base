@@ -66,7 +66,7 @@ def lookup_value_add(sample_pt, obj_index):
 
 	# print "Reached point 2."
 	#Find radius value. 	
-	rad_value = (((sample_pt[0]-object_poses[obj_index][0])**2)+((sample_pt[0]-object_poses[obj_index][1])**2))**0.5
+	rad_value = (((sample_pt[0]-object_poses[obj_index][0])**2)+((sample_pt[1]-object_poses[obj_index][1])**2))**0.5
 	# rad_value = ((sample_pt.x-alt_obj_pose.x)**2+(sample_pt.y-alt_obj_pose.y)**2)**0.5
 	# print "Radius value:",rad_value
 	#Find radius bucket. 
@@ -105,6 +105,8 @@ def calculate_value_function(obj_index):
 			# print sample
 			x = lookup_value_add(sample, obj_index)			
 			value_function[i][j]=x
+
+
 
 calculate_value_function(4)
 
