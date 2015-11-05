@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 # from ar_track_alvar.msg import AlvarMarkers
 import random
 
-radius_threshold = 5
+radius_threshold = 10
 discrete_size = 100
 
 discrete_space_x = 50
@@ -50,8 +50,8 @@ def random_obj_positions():
 	for i in range(0,number_scene_objects):		
 		trial_label = random.randrange(0,number_objects)
 		object_confidence[trial_label] = random.random()
- 		object_poses[trial_label][0] = random.randrange(-2,2)+random.randrange(0,3)
- 		object_poses[trial_label][1] = random.randrange(-2,2)+random.randrange(0,3)
+ 		object_poses[trial_label][0] = random.randrange(-4,-2)
+ 		object_poses[trial_label][1] = random.randrange(4,6)
 
  	# print "Object Poses:",object_poses
  	# print "Object confidences:",object_confidence
@@ -73,7 +73,7 @@ def lookup_value_add(sample_pt, obj_find_index):
 					bucket=i
 		# print sample_pt, rad_value, bucket
 
-		value_lookup += pairwise_value_function[obj_find_index][alt_obj][bucket]
+		value_lookup += pairwise_value_function[obj_find_index][alt_obj][bucket] * object_confidence[alt_obj]
 	return value_lookup
 
 
